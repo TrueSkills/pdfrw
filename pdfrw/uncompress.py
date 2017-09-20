@@ -53,7 +53,7 @@ def uncompress(mylist, leave_raw=False, warnings=set(),
                 error = str(s)
             else:
                 error = None
-                if parms:
+                if parms and parms != ['null']:
                     predictor = int(parms.Predictor or 1)
                     if 10 <= predictor <= 15:
                         data, error = flate_png(data, parms)
